@@ -89,7 +89,7 @@ Portal Creation Use Case
   6. User or Originating Platform decides if the Portal is persistent, depending on Originating Platform implementation.
   7. Optional- Originating Platform sends message to Destination Platform using the Inter-Platform Messaging System to set up a return destination Portal with the proper parameters for returning an Avatar from the Destination Platform back to the Originating Platform.
 
-![Figure 3- Portal Creation](https://github.com/oma3dao/portal-position-paper/blob/main/portal-creation-flow)
+![Figure 3- Portal Creation](https://github.com/oma3dao/portal-position-paper/blob/main/portal-creation-flow.png)
 
 ## Threat Model
 
