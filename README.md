@@ -7,4 +7,6 @@ On and off chain data privacy
   
 We will evaluate all proposals in the working group and come up with a draft specification. Once we do, we will finally release an RFC to the public.  So, please read this RFP and join the process.
 
+Please comment on the paper by [creating an issue](https://github.com/oma3dao/iwps-rfp/issues/new) or commenting in the [Google Doc](https://docs.google.com/document/d/1m6lUNzhqJGCLUPqH_8g3wOP0eiYmZWBj7LGVb_BGE9s/).
+
 https://www.oma3.org/join
