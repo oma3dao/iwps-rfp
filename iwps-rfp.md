@@ -62,7 +62,7 @@ In this RFP, the system of interest is the Inter World Portaling System ("IWPS" 
   * Search Engine- A Service that allows Actors to list or discover Platforms in the System.
   * Data Collector- A Service that collects data (such as portal transactions).
 
-![Figure 1- Main Actors](https://github.com/oma3dao/portal-position-paper/blob/main/oma3-portal.jpg)
+![Figure 1- Main Actors](https://github.com/oma3dao/portal-position-paper/blob/main/portaling-actors.png)
 
 ### Portal Utilization Use Case
 
@@ -77,7 +77,7 @@ In this RFP, the system of interest is the Inter World Portaling System ("IWPS" 
   9. Optional- Avatar can return to the Originating Platform using a Portal UI at the Destination Location (or overridden location) that has stored the location of the Originating Platform Portal UI.
 
 
-![Figure 2- Portal Utilization](https://github.com/oma3dao/portal-position-paper/blob/main/oma3-portal.jpg)
+![Figure 2- Portal Utilization](https://github.com/oma3dao/portal-position-paper/blob/main/portal-utilization-flow.png)
 
 Portal Creation Use Case
 
@@ -89,7 +89,7 @@ Portal Creation Use Case
   6. User or Originating Platform decides if the Portal is persistent, depending on Originating Platform implementation.
   7. Optional- Originating Platform sends message to Destination Platform using the Inter-Platform Messaging System to set up a return destination Portal with the proper parameters for returning an Avatar from the Destination Platform back to the Originating Platform.
 
-![Figure 3- Portal Creation](https://github.com/oma3dao/portal-position-paper/blob/main/oma3-portal.jpg)
+![Figure 3- Portal Creation](https://github.com/oma3dao/portal-position-paper/blob/main/portal-creation-flow)
 
 ## Threat Model
 
