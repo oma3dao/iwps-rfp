@@ -79,7 +79,7 @@ In this RFP, the system of interest is the Inter World Portaling System ("IWPS" 
 
 ![Figure 2- Portal Utilization](https://github.com/oma3dao/portal-position-paper/blob/main/portal-utilization-flow.png)
 
-Portal Creation Use Case
+### Portal Creation Use Case
 
   1. Destination Platform registers itself with the System, including a default Destination Location and persistence support (persistent and/or ephemeral Portals)
   2. Optional- System may require Destination Platform to pass an interoperability test in order to be registered.
@@ -95,7 +95,7 @@ Portal Creation Use Case
 
 Recognizing and documenting potential threats is crucial for building a robust portaling system, particularly in the complex landscape of the metaverse. The aim of this section is to provide a high level analysis of the diverse ways the system could be compromised or malfunction. This covers deliberate attempts to undermine the system, unintended user errors, or unforeseen edge cases. By preemptively identifying these issues, we can implement targeted strategies to mitigate risks, thus reinforcing both the reliability and credibility of the system. Below is a initial list of these potential weak points:
 
-Portal Utilization
+### Portal Utilization
 
 Portal utilization stands as one of the most critical components in the overarching functionality of our system. As the gateway that facilitates the movement of users and digital assets between various platforms—be they games, decentralized finance systems, or social spaces—it's vital that this feature operates smoothly, securely, and in alignment with user expectations. Not only does the integrity of portal utilization directly impact user experience, but it also has far-reaching implications for data security, asset management, and overall system robustness. Therefore, this section aims to outline potential risks, shortcomings, and anomalies that could undermine the effectiveness and safety of portal utilization. 
 
@@ -106,155 +106,167 @@ Portal utilization stands as one of the most critical components in the overarch
   5. System Failures: Avatars may get lost between Platforms if the system crashes or experiences other malfunctions.
   6. Avatar Acceptance Loopholes: Even if a Destination Platform rejects an incoming Avatar, Users may find ways to bypass these restrictions.
   7. Account Limitations: User doesn't have an account on the Destination Platform.
-  9. Identity Service Gaps: Destination Platform doesn't support the Identity Service used by the System.
-  10. Crypto Asset Barriers: Destination Platform requires crypto assets that the User doesn't possess.
-  11. Travel Mechanics Abuse: Users could use IWPS to undermine the intended mechanics of moving within a Platform, such as visiting Destination Locations that are normally off-limits to the User.
-  12. Foreign Assets and Avatars: User brings non-native Avatars or items into the Destination Platform  (e.g.- laser guns in a Medieval world).
-  13. Content Policy Violations: Users or Assets breach the Destination Platform's terms of service, including but not limited to:
-  14. Age Restrictions
-  15. Adult Content
-  16. Specific Game Mechanics
-  17. Asset Security: Adversaries compromise assets stored in User’s wallet.
-  18. Malware Risk: Users may download executable files that install malware on their systems.
+  8. Identity Service Gaps: Destination Platform doesn't support the Identity Service used by the System.
+  9. Crypto Asset Barriers: Destination Platform requires crypto assets that the User doesn't possess.
+  10. Travel Mechanics Abuse: Users could use IWPS to undermine the intended mechanics of moving within a Platform, such as visiting Destination Locations that are normally off-limits to the User.
+  11. Foreign Assets and Avatars: User brings non-native Avatars or items into the Destination Platform  (e.g.- laser guns in a Medieval world).
+  12. Content Policy Violations: Users or Assets breach the Destination Platform's terms of service, including but not limited to:
+      * Age Restrictions
+      * Adult Content
+      * Specific Game Mechanics
+  13. Asset Security: Adversaries compromise assets stored in User’s wallet.
+  14. Malware Risk: Users may download executable files that install malware on their systems.
 
-Portal Creation
+### Portal Creation
 
 The process of creating portals serves as the initiating step for user interactions within the system. Any errors or shortcomings that occur during this phase can have a cascading effect on subsequent operations, compromising the entire user experience. 
 
-  19. Misinterpretation of Destination by Platform: Destination Platform misunderstands or incorrectly parses the intended Destination Location.
-  20. User-Provided Incorrect Destination: User mistakenly inputs the wrong Destination Location.
-  21. Originating Platform Interpretation Errors: Originating Platform misreads or incorrectly identifies both the Destination Platform and the intended Destination Location.
-  22. Unregistered Destination Platforms: User adds a Destination Platform that has not been validated or is not listed in the Registry.
+  15. Misinterpretation of Destination by Platform: Destination Platform misunderstands or incorrectly parses the intended Destination Location.
+  16. User-Provided Incorrect Destination: User mistakenly inputs the wrong Destination Location.
+  17. Originating Platform Interpretation Errors: Originating Platform misreads or incorrectly identifies both the Destination Platform and the intended Destination Location.
+  18. Unregistered Destination Platforms: User adds a Destination Platform that has not been validated or is not listed in the Registry.
 
-Reliability
+### Reliability
 
-  23. Downtime of Destination Platform: Destination Platform is temporarily unavailable.
-  24. Registry Unavailability: Registry is down or inaccessible.
-  25. API Server Outages: API servers that facilitate portaling are down.
+  19. Downtime of Destination Platform: Destination Platform is temporarily unavailable.
+  20. Registry Unavailability: Registry is down or inaccessible.
+  21. API Server Outages: API servers that facilitate portaling are down.
 
-Privacy
+### Privacy
 
-  26. Actors tracking where Users/Avatars go in the metaverse.
+  22. Actors tracking where Users/Avatars go in the metaverse.
 
 ## Requirements
 
 The Requirements section covers a comprehensive range of functional and non-functional requirements that IWPS needs to fulfill. These span across performance, reliability, governance, usability, security, and interoperability. Also included are specific requirements related to identity services, payment systems, and asset transfers. Note that this document does not delve into the architectural or design aspects of the system, as they are covered in separate documents.
 Requirements definitions are used to judge specification proposals that describe system implementations.  When writing requirement definitions, we use the key words "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", and "MAY" as described in RFC 2119.
 
-SHALL: This word means that the definition is an absolute requirement of the specification.
-SHALL NOT means that the definition is an absolute prohibition of the specification.
-SHOULD: This word means that there may exist valid reasons in particular circumstances to ignore a particular definition, but the full implications must be understood and carefully weighed before choosing a different course.
-SHOULD NOT: This phrase means that there may exist valid reasons in particular circumstances when the particular behavior is acceptable or even useful, but the full implications should be understood and the case carefully weighed before implementing any behavior described with this label.
-MAY: This word means that a definition is truly optional. A specification may choose to fulfill the requirement because a particular marketplace requires it or because the specification feels that it enhances the product while another specification may omit the same item. 
+  SHALL: This word means that the definition is an absolute requirement of the specification.
 
-Platform Compatibility Requirements
+  SHALL NOT means that the definition is an absolute prohibition of the specification.
+
+  SHOULD: This word means that there may exist valid reasons in particular circumstances to ignore a particular definition, but the full implications must be understood and carefully weighed before choosing a different course.
+
+  SHOULD NOT: This phrase means that there may exist valid reasons in particular circumstances when the particular behavior is acceptable or even useful, but the full implications should be understood and the case carefully weighed before implementing any behavior described with this label.
+
+  MAY: This word means that a definition is truly optional. A specification may choose to fulfill the requirement because a particular marketplace requires it or because the specification feels that it enhances the product while another specification may omit the same item. 
+
+### 1. Platform Compatibility Requirements
 
 Platform compatibility requirement definitions describe the breadth of platforms and technologies an IWPS specification is expected to support.  The metaverse is highly diverse with platforms ranging from 2D to 3D to virtual reality representations.  Metaverse platforms run on mobile devices, desktop operating systems, and browsers.  IWPS’s goal is to encompass as diverse a technology stack as possible in its goal to connect the metaverse.
 
-General Compatibility - IWPS SHALL provide developer hooks that allow integration into the following types of Platforms:
-Platforms that do not use blockchain.
-Platforms developed with a Turing complete programming language.
-Platforms that use 2D graphics depiction.
-Platforms that use 3D graphics depiction.
+#### 1.1. General Compatibility - IWPS SHALL provide developer hooks that allow integration into the following types of Platforms:
+  * Platforms that do not use blockchain.
+  * Platforms developed with a Turing complete programming language.
+  * Platforms that use 2D graphics depiction.
+  * Platforms that use 3D graphics depiction.
 
-Rationale: To ensure that IWPS gets wide adoption and the metaverse includes as many worlds as possible, it is imperative that it supports the most commonly used programming paradigms and graphical interfaces used by Platforms.
-Game Engine Compatibility - IWPS SHALL provide developer hooks to integrate with Platforms that use:
-Unreal Engine
-Unity engine
-Playcanvas engine
+  Rationale: To ensure that IWPS gets wide adoption and the metaverse includes as many worlds as possible, it is imperative that it supports the most commonly used programming paradigms and graphical interfaces used by Platforms.
 
-Rationale: These are widely used game engines and having compatibility with them ensures a wider user base and ease of integration.
+#### 1.2. Game Engine Compatibility - IWPS SHALL provide developer hooks to integrate with Platforms that use:
+  * Unreal Engine
+  * Unity engine
+  * Playcanvas engine
 
-Browser Compatibility - IWPS SHALL provide developer hooks that allow integration into Platforms which:
-Run in a Chromium-based browser
-Run in a Firefox browser
+  Rationale: These are widely used game engines and having compatibility with them ensures a wider user base and ease of integration.
 
-Rationale: Popular browsers should be supported to ensure maximum reach and usability.
+#### 1.3. Browser Compatibility - IWPS SHALL provide developer hooks that allow integration into Platforms which:
+  * Run in a Chromium-based browser
+  * Run in a Firefox browser
 
-Mobile and Desktop OS Compatibility - IWPS SHALL provide developer hooks that allow integration into Platforms which run natively on:
-iOS
-MacOS
-Android
-Windows
+  Rationale: Popular browsers should be supported to ensure maximum reach and usability.
 
-Rationale: These are the major operating systems for both mobile and desktop environments. Supporting them ensures nearly universal compatibility.
+#### 1.4. Mobile and Desktop OS Compatibility - IWPS SHALL provide developer hooks that allow integration into Platforms which run natively on:
+  * iOS
+  * MacOS
+  * Android
+  * Windows
 
-Other compatibility  - IWPS SHOULD provide developer hooks that allow integration into Platforms with the following characteristics:
-Utilize blockchains with median finality of under one minute.
-Are installed via app store or direct download.
+  Rationale: These are the major operating systems for both mobile and desktop environments. Supporting them ensures nearly universal compatibility.
 
-Rationale: Supporting fast-finality blockchains enhances the IWPS's ability to facilitate quick and seamless portaling experiences. Additionally, allowing for diverse installation methods expands the system's compatibility across various Platforms.
+#### 1.5. Other compatibility  - IWPS SHOULD provide developer hooks that allow integration into Platforms with the following characteristics:
+  * Utilize blockchains with median finality of under one minute.
+  * Are installed via app store or direct download.
 
-Additional Compatibility - IWPS MAY provide developer hooks that allow integration into Platforms with the following characteristics:
-Developed using any game engine.
-Runs natively on any operating system.
+  Rationale: Supporting fast-finality blockchains enhances the IWPS's ability to facilitate quick and seamless portaling experiences. Additionally, allowing for diverse installation methods expands the system's compatibility across various Platforms.
 
-Rationale: It is valuable to capture any additional markets and future-proof the platform.
+#### 1.6. Additional Compatibility - IWPS MAY provide developer hooks that allow integration into Platforms with the following characteristics:
+  * Developed using any game engine.
+  * Runs natively on any operating system.
 
-Performance Requirements
+  Rationale: It is valuable to capture any additional markets and future-proof the platform.
+
+### 2. Performance Requirements
 
 A system that does not perform well results in a poor user experience.  These requirements ensure the system meets user expectations in responsiveness.
 
-IWPS SHOULD have a maximum latency of 1 second for displaying Destination Platform information.
+#### 2.1. IWPS SHOULD have a maximum latency of 1 second for displaying Destination Platform information.
 
-Rationale:  Quick display of Destination Platform information is essential for user engagement and efficient operations.
+  Rationale:  Quick display of Destination Platform information is essential for user engagement and efficient operations.
 
-IWPS SHOULD have a maximum latency of 20 seconds for Users that already have an account in the Destination Platform.
+#### 2.2. IWPS SHOULD have a maximum latency of 20 seconds for Users that already have an account in the Destination Platform.
 
-Rationale:  Returning users expect faster interactions and this will ensure a smooth user experience for them.
+  Rationale:  Returning users expect faster interactions and this will ensure a smooth user experience for them.
 
-IWPS SHOULD have a maximum latency of 1 minute for Users that do not have an account in the Destination Platform but have downloaded the Destination Platform client. 
+#### 2.3. IWPS SHOULD have a maximum latency of 1 minute for Users that do not have an account in the Destination Platform but have downloaded the Destination Platform client. 
 
-Rationale:  New users with the client should experience good performance to encourage continued use.
+  Rationale:  New users with the client should experience good performance to encourage continued use.
 
-IWPS MAY communicate the latency for different stages of portaling to Users.
+#### 2.4. IWPS MAY communicate the latency for different stages of portaling to Users.
 
-Rationale:  This allows users to be informed and manage their expectations during the teleportation process.
+  Rationale:  This allows users to be informed and manage their expectations during the teleportation process.
 
-IWPS SHALL allow the Originating Platform to communicate the availability status of the Destination Platform to the User. 
+#### 2.5. IWPS SHALL allow the Originating Platform to communicate the availability status of the Destination Platform to the User. 
 
-Rationale:  Availability status is critical for user decision-making and helps to manage user expectations.
+  Rationale:  Availability status is critical for user decision-making and helps to manage user expectations.
 
-IWPS MAY provide a rate limiter with the following functionalities:
-Prevents IWPS from executing more than a certain number of teleportations per second.
-Takes into account outstanding outbound teleportation requests on the Originating Platform.
-Takes into account inbound teleportation requests on the Destination Platform.
-Rationale:  Rate limiting ensures that the system remains stable and responsive under various conditions.
+#### 2.6. IWPS MAY provide a rate limiter with the following functionalities:
+  * Prevents IWPS from executing more than a certain number of teleportations per second.
+  * Takes into account outstanding outbound teleportation requests on the Originating Platform.
+  * Takes into account inbound teleportation requests on the Destination Platform.
 
-IWPS MAY enable Platforms to display a visual queue reflecting waiting times at both Originating and Destination Platforms
+  Rationale:  Rate limiting ensures that the system remains stable and responsive under various conditions.
 
-Rationale:  A visual queue helps manage user expectations and could improve user experience.
+#### 2.7. IWPS MAY enable Platforms to display a visual queue reflecting waiting times at both Originating and Destination Platforms
 
-IWPS MAY enable Platforms to display a visual queue reflecting waiting times at both Originating and Destination Platforms.
+  Rationale:  A visual queue helps manage user expectations and could improve user experience.
 
-Rationale:  A visual queue helps manage user expectations and could improve user experience.
+#### 2.8. IWPS MAY enable Platforms to display a visual queue reflecting waiting times at both Originating and Destination Platforms.
 
-IWPS SHOULD have an uptime of 95% 
+  Rationale:  A visual queue helps manage user expectations and could improve user experience.
 
-Rationale:  High uptime ensures availability and trust in the service.
+#### 2.9. IWPS SHOULD have an uptime of 95% 
 
-IWPS SHOULD implement DDoS protection mechanisms. 
+  Rationale:  High uptime ensures availability and trust in the service.
 
-Rationale:  Protection against DDoS attacks ensures service availability and user trust.
+#### 2.10. IWPS SHOULD implement DDoS protection mechanisms. 
 
-IWPS SHOULD be resistant to censorship. 
+  Rationale:  Protection against DDoS attacks ensures service availability and user trust.
 
-Rationale:  Censorship resistance ensures that the platform is accessible to a broad user base.  Censorship resistance is a core Web3 value.
+#### 2.11. IWPS SHOULD be resistant to censorship. 
 
-IWPS SHOULD be decentralized with no single point of failure controlled by a single entity.
+  Rationale:  Censorship resistance ensures that the platform is accessible to a broad user base.  Censorship resistance is a core Web3 value.
 
-Rationale:  Decentralization adds an additional layer of reliability and security to the platform.  Decentralization is also a core Web3 value.
-Governance Requirements
+#### 2.12. IWPS SHOULD be decentralized with no single point of failure controlled by a single entity.
+
+  Rationale:  Decentralization adds an additional layer of reliability and security to the platform.  Decentralization is also a core Web3 value.
+
+### 3. Governance Requirements
+
 The Governance Section outlines the organizational and administrative principles essential for the effective functioning and trustworthiness of the Inter World Portaling System (IWPS). 
-IWPS SHALL distinguish between certified and uncertified Platforms.
 
-Rationale:  Differentiating between certified and uncertified platforms establishes a trust mechanism and ensures compliance with set standards to guarantee interoperability.
+#### 3.1. IWPS SHALL distinguish between certified and uncertified Platforms.
 
-IWPS SHOULD support the following permissions policies: Decentralized infrastructure can be run by any OMA3 Creator or Sponsor member.
+  Rationale:  Differentiating between certified and uncertified platforms establishes a trust mechanism and ensures compliance with set standards to guarantee interoperability.
 
-Rationale:  Allowing only OMA3 Creator or Sponsor members to run the decentralized infrastructure ensures a certain level of quality and trust, while still being inclusive.  IWPS can always become more permissionless over time whereas going from permissionless to permissioned is a harder transition.
-Usability Requirements
+#### 3.2. IWPS SHOULD support the following permissions policies: Decentralized infrastructure can be run by any OMA3 Creator or Sponsor member.
+
+  Rationale:  Allowing only OMA3 Creator or Sponsor members to run the decentralized infrastructure ensures a certain level of quality and trust, while still being inclusive.  IWPS can always become more permissionless over time whereas going from permissionless to permissioned is a harder transition.
+
+### 4. Usability Requirements
+
 The Usability Section of this document is dedicated to defining standards that prioritize user-centric design, ease of use, and the overall user experience in the Inter World Portaling System (IWPS). The guidelines set forth in this section aim to reduce barriers to entry, simplify processes, and enhance the fluidity of interactions for users. Areas covered include the need for extra downloads, text entry, click interactions, visual media requirements, monetization options, avatar visibility, and notifications. These factors contribute to the creation of a seamless, intuitive, and flexible environment for users navigating across multiple platforms in the Metaverse.
+
 IWPS SHOULD NOT require any extra downloads other than the downloading of Platform applications.
 
 Rationale: This requirement streamlines the user experience and reduces entry barriers for users.
