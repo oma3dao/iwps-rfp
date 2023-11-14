@@ -267,340 +267,415 @@ The Governance Section outlines the organizational and administrative principles
 
 The Usability Section of this document is dedicated to defining standards that prioritize user-centric design, ease of use, and the overall user experience in the Inter World Portaling System (IWPS). The guidelines set forth in this section aim to reduce barriers to entry, simplify processes, and enhance the fluidity of interactions for users. Areas covered include the need for extra downloads, text entry, click interactions, visual media requirements, monetization options, avatar visibility, and notifications. These factors contribute to the creation of a seamless, intuitive, and flexible environment for users navigating across multiple platforms in the Metaverse.
 
-IWPS SHOULD NOT require any extra downloads other than the downloading of Platform applications.
+#### 4.1. IWPS SHOULD NOT require any extra downloads other than the downloading of Platform applications.
 
 Rationale: This requirement streamlines the user experience and reduces entry barriers for users.
 
-IWPS SHOULD enable teleportations that do not require any text entry other than entering the Destination Platform and Destination Location.
+#### 4.2. IWPS SHOULD enable teleportations that do not require any text entry other than entering the Destination Platform and Destination Location.
 
 Rationale:Reducing the time spent entering text will simplify the teleportation process and improve usability and accessibility.
 
-IWPS MAY enable teleportations that do not require additional clicks during the teleportation process.
+#### 4.3. IWPS MAY enable teleportations that do not require additional clicks during the teleportation process.
 
 Rationale:  Minimizing user actions during teleportation enhances user experience and gives the truest experience of a seamless and interconnected metaverse.
 
-IWPS SHOULD NOT require an image or video of the Destination Platform inside an Originating Platform’s Portal UI.
+#### 4.4. IWPS SHOULD NOT require an image or video of the Destination Platform inside an Originating Platform’s Portal UI.
 
 Rationale: Reducing the need for visual media from the Destination Platform reduces complexity and dependency between platforms.  It also reduces the minimum requirements for Platforms to be compatible with the system.
 
-IWPS SHALL allow Platforms to enforce paywalls when users arrive at the Destination Location.
+#### 4.5. IWPS SHALL allow Platforms to enforce paywalls when users arrive at the Destination Location.
 
 Rationale: This allows Destination Platforms to have flexibility with their monetization strategy.
 
-IWPS SHALL NOT enforce the condition that an Avatar can only be visible in one location across all IWPS Platforms.
+#### 4.6. IWPS SHALL NOT enforce the condition that an Avatar can only be visible in one location across all IWPS Platforms.
 
 Rationale: This ensures that users have the freedom to multitask across multiple platforms and gives Platforms flexibility on their experience.
 
-IWPS SHOULD NOT enforce any UX elements on the Originating Platform.
+#### 4.7. IWPS SHOULD NOT enforce any UX elements on the Originating Platform.
 
 Rationale: This gives Originating Platforms the flexibility to maintain their unique user experiences.
 
-IWPS SHOULD implement a notification system for informing Users.
+#### 4.8. IWPS SHOULD implement a notification system for informing Users.
 
 Rationale: A notification system keeps users informed about critical updates, enhancing the user experience.
 
-IWPS SHOULD allow Destination Platforms to automatically launch without requiring the User to manually open the Destination Platform application
+#### 4.9. IWPS SHOULD allow Destination Platforms to automatically launch without requiring the User to manually open the Destination Platform application
 
 Rationale:  This requirement streamlines the teleportation process and gives Users the feeling of an interconnected metaverse.
 
-Messaging System Requirements
+### 5. Messaging System Requirements
+
 This section outlines the essential requirements for messaging systems that IWPS will rely on for communication across various Platforms, applications, and devices. The requirements definitions aim to ensure IWPS runs on secure messaging systems with enough flexibility to meet compatibility requirements. Each subsection is designed to address a different aspect of communication, ranging from intradevice messaging to secure Internet-based communication, thereby ensuring a robust and adaptable messaging systems that IWPS can rely on.
- IWPS SHALL support messaging systems that allow communication between applications running on the same operating system.
+
+#### 5.1. IWPS SHALL support messaging systems that allow communication between applications running on the same operating system.
 
 Rationale:To enable teleportation and communications between different applications within the same operating system.
 
- IWPS MAY support messaging systems that allow communication across operating systems running on the same device.
+#### 5.2. IWPS MAY support messaging systems that allow communication across operating systems running on the same device.
 
 Rationale: Multi-OS devices are uncommon, but there is benefit to supporting this scenario.
 
-IWPS SHOULD support messaging systems that allow communication between different devices.
+#### 5.3. IWPS SHOULD support messaging systems that allow communication between different devices.
 
 Rationale: A cross-metaverse IWPS is severely limited without inter-device teleportation.
 
- IWPS SHALL support messaging systems that allow communication over the Internet.
+#### 5.4. IWPS SHALL support messaging systems that allow communication over the Internet.
 
 Rationale: To facilitate global reach and interconnectivity.
 
- IWPS SHALL only support messaging systems that allow a Platform to use TLS communications.
+#### 5.5. IWPS SHALL only support messaging systems that allow a Platform to use TLS communications.
 
 Rationale: Secure communications prevent adversaries from compromising IWPS.
 
- IWPS MAY support messaging systems that allow communications between smart contracts on different blockchains.
+#### 5.6. IWPS MAY support messaging systems that allow communications between smart contracts on different blockchains.
 
 Rationale: IWPS asset transfers may need cross-chain communications.
-Registry Requirements
+
+### 6. Registry Requirements
+
 The Registry is an IWPS component that keeps track of “certified” Platforms.  This section lays out the requirements for registry functionality, ensuring a streamlined and secure experience for all Platforms. 
-The Registry SHALL allow Platforms to communicate with it via web-based API accessible from any Platform with access to the Internet.
+
+#### 6.1. The Registry SHALL allow Platforms to communicate with it via web-based API accessible from any Platform with access to the Internet.
 
 Rationale:  An API is the most common method to programmatically access a resource.
 
-The Registry MAY allow communication via smart contract API accessible from any smart contract on the same blockchain. 
+#### 6.2. The Registry MAY allow communication via smart contract API accessible from any smart contract on the same blockchain. 
 
 Rationale: It is unlikely the Registry’s smart contracts will reside on the same blockchain as a Platform, but if they do smart contract APIs are more efficient than off-chain APIs. 
 
-The Registry SHALL only list certified Platforms.
-The Registry SHALL only allow certified Platforms to access the Registry.
+#### 6.3. The Registry SHALL only list certified Platforms.
+
+#### 6.4. The Registry SHALL only allow certified Platforms to access the Registry.
 
 Rationale: For the best user experience only Platforms that are certified as interoperable with other Platforms and compliant to IWPS specifications should be part of IWPS.  Note that this could be a temporary “beta” requirement only and over time IWPS gives the option for Users or Platforms to incorporate non-certified Platforms as well.  OMA3 would like to receive comments on these requirements from the community.
-Security Requirements
+
+### 7. Security Requirements
+
 This section delineates the security requirements for deterring unapproved use of IWPS. These requirements are fundamental to preserving the integrity, confidentiality, and availability of data and services within the system. 
-All data transferred between Actors SHALL be encrypted (TLS ciphersuites, AES).
-All data transferred SHALL use authentication (X.509 certificates, PKI, plain public/private (JWT), symmetric shared keys).
+
+#### 7.1. All data transferred between Actors SHALL be encrypted (TLS ciphersuites, AES).
+
+#### 7.2. All data transferred SHALL use authentication (X.509 certificates, PKI, plain public/private (JWT), symmetric shared keys).
 
 Rationale: To ensure the secure transmission of data between platforms.
 
-Destination Platforms SHALL authenticate themselves to Users wishing to teleport to them from an Originating Platform.
+#### 7.3. Destination Platforms SHALL authenticate themselves to Users wishing to teleport to them from an Originating Platform.
 
 Rationale:To confirm the authenticity of the destination, enhancing user security and preventing hijacking of teleportation.
-Identity Service Requirements
+
+### 8. Identity Service Requirements
+
 This section outlines the comprehensive set of requirements governing identity management within the system. IWPS needs to be flexible enough to support commonly used Web3 identity systems as well as Web3 identity systems as metaverse Platforms are diverse in terms of how they handle identity.  
-IWPS SHOULD integrate an Identity Service abstraction layer that gives a unified interface to one or more approved Identity Services.
+
+#### 8.1. IWPS SHOULD integrate an Identity Service abstraction layer that gives a unified interface to one or more approved Identity Services.
 
 Rationale:  IWPS should be flexible enough to support different Identity Services, but Identity Services should be approved to protect Users from exploit.
 
-IWPS SHOULD NOT require Platforms to support a separate Identity Service, and instead allow the Destination Platforms to use its own authentication. 
+#### 8.2. IWPS SHOULD NOT require Platforms to support a separate Identity Service, and instead allow the Destination Platforms to use its own authentication. 
 
 Rationale:  To provide flexibility in identity management for various Platforms.
 
-IWPS SHALL allow Platforms to use any identity method they want.
+#### 8.3. IWPS SHALL allow Platforms to use any identity method they want.
 
 Rationale: To provide flexibility in identity management for various Platforms.
 
-IWPS SHOULD require Destination Platforms to communicate which authentication methods they support.
+#### 8.4. IWPS SHOULD require Destination Platforms to communicate which authentication methods they support.
 
 Rationale:  Users should know the options they have for identity in a Platform.
 
-IWPS SHOULD require Destination Platforms to track which Originating Platform IDs are tied to which Destination Platform IDs. 
+#### 8.5. IWPS SHOULD require Destination Platforms to track which Originating Platform IDs are tied to which Destination Platform IDs. 
 
 Rationale:  This ensures IWPS works in a consistent manner from a User perspective.
 
-IWPS SHOULD give Platforms the cybersecurity information (e.g., certifications) Platforms need to make their own determination on which Identity Service they use. 
+#### 8.6. IWPS SHOULD give Platforms the cybersecurity information (e.g., certifications) Platforms need to make their own determination on which Identity Service they use. 
 
 Rationale:  This gives Platforms more sovereignty over their Identity Service integration.
 
-IWPS SHALL give Platforms the privacy information (e.g., certifications) Platforms need to make their own determination on which Identity Service they use.
+#### 8.7. IWPS SHALL give Platforms the privacy information (e.g., certifications) Platforms need to make their own determination on which Identity Service they use.
 
 Rationale:  This gives Platforms more sovereignty over their Identity Service integration.
 
-IWPS SHALL only integrate with Identity Services that support all of the following sign-on and account sharing methods:
-Username/password with 2FA (text, mobile app, FIDO hardware, etc.)
-Mobile crypto wallets
-Browser crypto wallets
+#### 8.8. IWPS SHALL only integrate with Identity Services that support all of the following sign-on and account sharing methods:
+
+ * Username/password with 2FA (text, mobile app, FIDO hardware, etc.)
+ * Mobile crypto wallets
+ * Browser crypto wallets
 
 Rationale: These methods are secure and commonly used today, so Identity Services that integrate with IWPS need to support them to ensure a smooth and secure user experience.
 
-IWPS SHOULD support Identity Services that support any of the following sign-on and account sharing methods:
-OAUTH2/SAML/OpenID Connect
-Hardware crypto wallets
-Web3 identity
-DIDs
+#### 8.9. IWPS SHOULD support Identity Services that support any of the following sign-on and account sharing methods:
+
+ * OAUTH2/SAML/OpenID Connect
+ * Hardware crypto wallets
+ * Web3 identity
+ * DIDs
 
 Rationale: To enable broader compatibility with existing and future Identity Services.
 
-IWPS MAY have hooks to support Identity Services that support the following sign-on and account sharing methods:
-MPC crypto wallets
-Smart contract crypto wallets, including account abstraction
-One time code
-Sign In with asymmetric signature (e.g., public key pair JWT)
+#### 8.10. IWPS MAY have hooks to support Identity Services that support the following sign-on and account sharing methods:
+
+ * MPC crypto wallets
+ * Smart contract crypto wallets, including account abstraction
+ * One time code
+ * Sign In with asymmetric signature (e.g., public key pair JWT)
 
 Rationale: To offer extensive flexibility in identity solutions.
 
-IWPS SHALL support Identity Services that use DID verified credentials to log in users to Platforms.
+#### 8.11. IWPS SHALL support Identity Services that use DID verified credentials to log in users to Platforms.
 
 Rationale: DIDs give Users control over privacy and security.
 
-IWPS SHOULD have the ability to track multiple Avatars controlled by one User and notify the Destination Platform which Avatar the User is currently using to teleport.
+#### 8.12. IWPS SHOULD have the ability to track multiple Avatars controlled by one User and notify the Destination Platform which Avatar the User is currently using to teleport.
 
 Rationale: Users often maintain more than one Avatar on a Platform.  This requirement ensures IWPS supports this kind of identity model.
 
-IWPS SHOULD support Identity Services that use Web3 domains to identify Users.
+#### 8.13. IWPS SHOULD support Identity Services that use Web3 domains to identify Users.
 
 Rationale: To support newer, blockchain-based methods of identification.
 
-IWPS SHALL integrate with Identity Services that support different types of private keys (Neo vs EVM vs BTC).  
+#### 8.14. IWPS SHALL integrate with Identity Services that support different types of private keys (Neo vs EVM vs BTC).  
 
 Rationale: To ensure compatibility across various blockchain technologies.
 
-IWPS SHALL support identities across different blockchains. 
+#### 8.15. IWPS SHALL support identities across different blockchains. 
 
 Rationale: To enable a seamless cross-blockchain identity experience for users.
 
-IWPS SHALL allow a User to create an account on the Destination Platform if the User does not have one.  
+#### 8.16. IWPS SHALL allow a User to create an account on the Destination Platform if the User does not have one.  
 
 Rationale: This will allow Users to explore the metaverse without limitations.
 
-IWPS SHALL require Identity Services to adhere to all privacy regulations pertaining to the User’s jurisdiction.  
+#### 8.17. IWPS SHALL require Identity Services to adhere to all privacy regulations pertaining to the User’s jurisdiction.  
 
 Rationale: To comply with legal requirements and ensure user privacy.
 
-IWPS SHALL require Identity Services to adhere to privacy requirements in this document.  
+#### 8.18. IWPS SHALL require Identity Services to adhere to privacy requirements in this document.  
 
 Rationale: Web3 often tramples on User privacy with tracking functionality.  This is against OMA3 principles.
 
-IWPS MAY support the User migrating to different identity mechanisms (e.g., custodial to self-custody) while maintaining the same identity in Platforms.  
+#### 8.19. IWPS MAY support the User migrating to different identity mechanisms (e.g., custodial to self-custody) while maintaining the same identity in Platforms.  
 
 Rationale: In Web3 users often go through a migration journey from custodial Web2-style identity mechanisms to self-custody identity mechanisms.  It is advantageous for IWPS to support this migration.
 
-IWPS SHOULD enable future support for tying digital assets (besides avatars) to Users and Avatars.  
+#### 8.20. IWPS SHOULD enable future support for tying digital assets (besides avatars) to Users and Avatars.  
 
 Rationale: It is beneficial to allow Avatars to take their Items from Platform to Platform.
 
-IWPS SHOULD allow users to log in to the Destination Platform with their credentials if the Identity Service is not able to automatically log a User into the Destination Platform.  
+#### 8.21. IWPS SHOULD allow users to log in to the Destination Platform with their credentials if the Identity Service is not able to automatically log a User into the Destination Platform.  
 
 Rationale: To ensure that Users are not locked out in case the Identity System fails to automatically log in a User.
 
-IWPS SHOULD require Identity Services to make available to Users information about their policies.  
+#### 8.22. IWPS SHOULD require Identity Services to make available to Users information about their policies.  
 
 Rationale: To ensure transparency and informed user choice.
-Payment Service Requirements
+
+### 9. Payment Service Requirements
+
 This section outlines the requirements for the Payment Service, focusing on secure and efficient transactional capabilities. Payments could be needed for anything from gas fees to Platform subscriptions.
-A Payment System SHALL get cybersecurity certification in order to interact with IWPS.  
+
+#### 9.1. A Payment System SHALL get cybersecurity certification in order to interact with IWPS.  
+
 Rationale: To ensure only secure payment systems are used with IWPS.
-A Payment System SHALL allow Users to pay for the following fees:
-Platform subscription
-Gas.  
+
+#### 9.2. A Payment System SHALL allow Users to pay for the following fees:
+
+ * Platform subscription
+ * Gas.  
+
 Rationale: To provide essential payment functionalities within the platform.
-A Payment System SHOULD allow Users to pay for the following fees if required:
-Asset transfer
-IWPS teleportation.  
+
+#### 9.3. A Payment System SHOULD allow Users to pay for the following fees if required:
+
+ * Asset transfer
+ * IWPS teleportation.
+
 Rationale: These fees may also be required in IWPS.
-A Payment System SHOULD allow for automatic payments.  
+
+#### 9.4. A Payment System SHOULD allow for automatic payments.  
+
 Rationale: To streamline the payment process and improve user experience.
-A Payment System MAY allow for recurring payments.  
+
+#### 9.5. A Payment System MAY allow for recurring payments.  
+
 Rationale: To offer users the convenience of subscription-based services.
-Privacy Requirements
+
+### 10. Privacy Requirements
+
 This section ensures that both System and Actors operate within the confines of data privacy laws and best practices. These requirements focus on the necessity of user consent before data collection and stringent access control measures for stored data. Special attention is given to the protection of sensitive real-world identities and compliance with jurisdiction-specific data protection regulations.
-IWPS SHALL require Data Collectors to seek permission before collecting data.
+
+#### 10.1. IWPS SHALL require Data Collectors to seek permission before collecting data.
+
 Rationale: To comply with data privacy laws and user consent.
-Data stored by Data Collectors SHALL have access control and be protected from unauthorized access. 
+
+#### 10.2. Data stored by Data Collectors SHALL have access control and be protected from unauthorized access. 
+
 Rationale: To ensure data security and prevent breaches.
-Real-world identities and associated data (e.g., KYC data) SHALL be protected from unauthorized access. 
+
+#### 10.3. Real-world identities and associated data (e.g., KYC data) SHALL be protected from unauthorized access. 
+
 Rationale: To safeguard sensitive identity information from unauthorized users.
-Data collection SHALL comply with regulations of the User’s or Platform’s jurisdiction. 
+
+#### 10.4. Data collection SHALL comply with regulations of the User’s or Platform’s jurisdiction. 
+
 Rationale: To ensure compliance with local and international data protection laws.
-Asset Transfer Requirements
+
+### 11. Asset Transfer Requirements
+
 This section outlines the guidelines and requirements concerning asset transfers within the IWPS ecosystem. It emphasizes the need to standardize asset transfer rules and ensure compatibility across platforms. The aim is to establish a seamless, user-friendly, and secure environment for asset management and transfers between different platforms.
-IWPS SHOULD support a mechanism that regulates how assets created by the creating Platform are treated in other Platforms, and Destination Platforms either have to accept those terms or deny the asset transfer. 
+
+#### 11.1. IWPS SHOULD support a mechanism that regulates how assets created by the creating Platform are treated in other Platforms, and Destination Platforms either have to accept those terms or deny the asset transfer. 
+
 Rationale: IWPS respects the rights of creators, which means all Platforms must accept the terms creators establish for assets they create or not use them at all.
-Incompatibilities in asset transfers SHOULD be communicated to Users before they initiate the teleportation. 
+
+#### 11.2. Incompatibilities in asset transfers SHOULD be communicated to Users before they initiate the teleportation. 
+
 Rationale: To keep users informed and prevent unexpected issues during asset transfers.
-IWPS SHOULD support bilateral agreements between Platforms on Asset transfers. 
+
+#### 11.3. IWPS SHOULD support bilateral agreements between Platforms on Asset transfers. 
+
 Rationale: Bilateral agreements streamline the asset transfer process between Platforms.
-IWPS SHALL ensure (to the extent possible) that Avatars and all Items show up in the Originating Platform if there is an error (as determined by the Destination Platform) before the Avatar appears in the Destination Platform.  
+
+#### 11.4. IWPS SHALL ensure (to the extent possible) that Avatars and all Items show up in the Originating Platform if there is an error (as determined by the Destination Platform) before the Avatar appears in the Destination Platform.  
+
 Rationale: This allows IWPS to recover gracefully from errors.
-If there are different methods for transferring Assets, IWPS SHOULD allow the Originating Platform and Destination Platform to agree on which to use.  
+
+#### 11.5. If there are different methods for transferring Assets, IWPS SHOULD allow the Originating Platform and Destination Platform to agree on which to use. 
+
 Rationale: This gives Platforms the flexibility with asset transfer methods while also maintaining a seamless user experience.
-System SHALL NOT force Platforms to transfer Items through the System unless it is a return transfer (see below).  
+
+#### 11.6. System SHALL NOT force Platforms to transfer Items through the System unless it is a return transfer (see below).  
+
 Rationale: Give Platforms complete sovereignty over their asset management.
-Destination Platform SHALL give Users the ability to transfer Assets from Destination Platform back to the Originating Platform.  
+
+#### 11.7. Destination Platform SHALL give Users the ability to transfer Assets from Destination Platform back to the Originating Platform.  
+
 Rationale: To ensure users maintain control over their assets while using IWPS.
-IWPS SHALL require Originating Platforms to allow Users to control when an asset transfer happens.  An example of such control would be a setting, or a one-time permission such as giving a mobile application permission to use your location data.
+
+#### 11.8. IWPS SHALL require Originating Platforms to allow Users to control when an asset transfer happens.  An example of such control would be a setting, or a one-time permission such as giving a mobile application permission to use your location data.
+
 Rationale: To ensure users maintain control over their assets while using IWPS.
-IWPS Economy Requirements
+
+### 12. IWPS Economy Requirements
+
 IWPS will support an economy that will support functionality such as fees for teleportation, staking for portal creation, and a compensation and trust system in platform registration and certification. The IWPS economy may leverage a fungible token for some of this functionality.
-IWPS MAY charge a fee for teleportation.  
+
+#### 12.1. IWPS MAY charge a fee for teleportation.  
 
 Rationale: To cover the operational costs associated with the teleportation feature.
 
-If there is a fee, IWPS SHOULD allow Platforms to pay teleportation fees for the User.  
+#### 12.2. If there is a fee, IWPS SHOULD allow Platforms to pay teleportation fees for the User.  
 
 Rationale: To improve the user experience by reducing or eliminating costs they may incur.
 
-IWPS MAY establish a staking fee for portal creation.  
+#### 12.3. IWPS MAY establish a staking fee for portal creation.  
 
 Rationale: To allow Platforms to monetize IWPS and prevent spamming portals.
 
-IWPS MAY allow Platforms to pay a fee or stake for registration.  
+#### 12.4. IWPS MAY allow Platforms to pay a fee or stake for registration.  
 
 Rationale: To pay for the cost of maintaining the certification program and requiring Platforms to have “skin in the game”.
 
-IWPS MAY allow Platform certification costs to be paid using tokens.  
+#### 12.5. IWPS MAY allow Platform certification costs to be paid using tokens.  
 
 Rationale: To streamline transactions in IWPS and support the OMA3 token architecture.
 
-IWPS SHOULD allow the Destination Platform to charge a fee for User landing at specific locations (premium vs free).  
+#### 12.6. IWPS SHOULD allow the Destination Platform to charge a fee for User landing at specific locations (premium vs free).  
 
 Rationale: To enable platforms to monetize specific features or locations.
 
-IWPS MAY allow Users to purchase priority teleportation passes.  
+#### 12.7. IWPS MAY allow Users to purchase priority teleportation passes.  
 
 Rationale: To offer users expedited services at a premium.
 
-IWPS MAY allow teleportation fees to be split between Originating Platform, Destination Platform, other Actors, and IWPS.  
+#### 12.8. IWPS MAY allow teleportation fees to be split between Originating Platform, Destination Platform, other Actors, and IWPS.  
 
 Rationale: To give Platforms ultimate flexibility with fees and fairly distribute the financial burden and benefits among all stakeholders.
-Change Log
-Version
-Date
-Comments
-1.0
-23-11-05
-First draft to public
 
-Authors
-Batis Samadian (Space, OMA3)
-Alfred Tom (Wivity, OMA3)
-Judy Chen (Wivity, OMA3)
-Alaina (Lamina1)
-Mic (Africarare)
-Federico (Freename)
-Priscilla (APT)
-Marc (Animoca)
-Zara (Neoki)
-Martin (Identity.com)
-Anton (Crosstech)
-Riccardo (Alice)
-Sebastien (Ilogos)
-Jörg (Wivity)
-Anton (Crosstech)
-Charles (XRDNA)
-Angelo (Dacoco)
-Joel (MultiversalME)
-Idan (Upland)
-Jerry (Animoca)
-Wook (Etri) joined late
-Phillip (Identity.com)
-Vincent (Nifty Craft)
-Saiid (Nifty Craft)
-Gino (Decentraland)
-William (MetaMapp)
-Somnath (MetaJuice)
-Anis (Virtua)
-Paul-David (MFG)
-Davide (Freename)
-Appendix:  Existing Art
+## Change Log
+
+* Version: 1.0
+* Date: 23-11-05
+* Comments: First draft to public
+
+## Authors
+
+* Batis Samadian (Space, OMA3)
+* Alfred Tom (Wivity, OMA3)
+* Judy Chen (Wivity, OMA3)
+* Alaina (Lamina1)
+* Mic (Africarare)
+* Federico (Freename)
+* Priscilla (APT)
+* Marc (Animoca)
+* Zara (Neoki)
+* Martin (Identity.com)
+* Anton (Crosstech)
+* Riccardo (Alice)
+* Sebastien (Ilogos)
+* Jörg (Wivity)
+* Anton (Crosstech)
+* Charles (XRDNA)
+* Angelo (Dacoco)
+* Joel (MultiversalME)
+* Idan (Upland)
+* Jerry (Animoca)
+* Wook (Etri) joined late
+* Phillip (Identity.com)
+* Vincent (Nifty Craft)
+* Saiid (Nifty Craft)
+* Gino (Decentraland)
+* William (MetaMapp)
+* Somnath (MetaJuice)
+* Anis (Virtua)
+* Paul-David (MFG)
+* Davide (Freename)
+
+## Appendix:  Existing Art
+
 This appendix is a partial list of technology, practices, and solutions that are relevant to IWPS.  The goal is to add to this list so it is more comprehensive as this is a work in progress.
-Developer Integration Hooks
-Plugins: Pre-built code that can be easily integrated into existing platforms to extend functionalities.
-Extensions: Add-ons that users can install to extend the capabilities of a software application.
-Source Code: Direct access to the source code for customization.
-Messaging Service
-Communication Layer - Protocols
-IPSME/Messaging: A specialized messaging protocol.
-Phone OS messaging: Deep linking.
-Headsets (e.g.- MS Hololens, Apple VisionOS).
-HTTPS/TCP/IP: Includes Web Sockets, REST, SOAP, FTP, and SOAP.
-WebRTC: Real-time communication.
-gRPC: High-performance, universal remote procedure call (RPC) framework.
-Structure Layer - Data Structures
-JSON: Widely used data interchange format.
-GraphQL over JSON: Provides a more efficient, powerful and flexible alternative to the traditional REST API.
-XML: Another widely-used data interchange format.
-Binary: For compressed, faster data interchange.
-Content Layer - Types of Content
-Mapping of content to worlds: Determining location.
-Transferring identity and assets attached to the avatar passing through the portal.
-Communicating portaling intent: Information about the incoming avatar.
-Error Communication: Notifications and logs.
-Capacity information: Real-time data on system load.
-Transaction Models
-Open sessions with constant communication: Suited for real-time interactions.
-API-style individual sessions: Suited for sporadic, on-demand interactions.
 
-Identity Service
-Master Seed Phrase: Same master seed phrase for all chains but can derive different addresses from it.
-Custodial Wallet Services: Cross-platform support.
-Token Bound Contract: ERC 6551 vs SBTs.
+### 1. Developer Integration Hooks
+
+#### 1.1. Plugins: Pre-built code that can be easily integrated into existing platforms to extend functionalities.
+#### 1.2. Extensions: Add-ons that users can install to extend the capabilities of a software application.
+#### 1.3. Source Code: Direct access to the source code for customization.
+
+### 2. Messaging Service
+
+#### 2.1. Communication Layer - Protocols
+
+ ##### 2.1.1 IPSME/Messaging: A specialized messaging protocol.
+ ##### 2.1.2 Phone OS messaging: Deep linking.
+ ##### 2.1.3 Headsets (e.g.- MS Hololens, Apple VisionOS).
+ ##### 2.1.4 HTTPS/TCP/IP: Includes Web Sockets, REST, SOAP, FTP, and SOAP.
+ ##### 2.1.5 WebRTC: Real-time communication.
+ ##### 2.1.6 gRPC: High-performance, universal remote procedure call (RPC) framework.
+ 
+#### 2.2. Structure Layer - Data Structures
+
+##### 2.2.1 JSON: Widely used data interchange format.
+##### 2.2.2 GraphQL over JSON: Provides a more efficient, powerful and flexible alternative to the traditional REST API.
+##### 2.2.3 XML: Another widely-used data interchange format.
+##### 2.2.4 Binary: For compressed, faster data interchange.
+
+#### 2.3. Content Layer - Types of Content
+
+##### 2.3.1 Mapping of content to worlds: Determining location.
+##### 2.3.2 Transferring identity and assets attached to the avatar passing through the portal.
+##### 2.3.3 Communicating portaling intent: Information about the incoming avatar.
+##### 2.3.4 Error Communication: Notifications and logs.
+##### 2.3.5 Capacity information: Real-time data on system load.
+
+#### 2.4. Transaction Models
+
+##### 2.4.1 Open sessions with constant communication: Suited for real-time interactions.
+##### 2.4.2 API-style individual sessions: Suited for sporadic, on-demand interactions.
+
+### 3. Identity Service
+
+#### 3.1. Master Seed Phrase: Same master seed phrase for all chains but can derive different addresses from it.
+#### 3.2. Custodial Wallet Services: Cross-platform support.
+#### 3.3. Token Bound Contract: ERC 6551 vs SBTs.
 
 
 
