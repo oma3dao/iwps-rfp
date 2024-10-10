@@ -303,6 +303,14 @@ Rationale: A notification system keeps users informed about critical updates, en
 
 Rationale:  This requirement streamlines the teleportation process and gives Users the feeling of an interconnected metaverse.
 
+#### 4.10. IWPS SHOULD allow a User to understand the privacy policy of the Destination Platform before initiating the teleportation.
+
+#### 4.11. IWPS SHOULD allow a User to understand the intellectual property policy of the Destination Platform before initiating the teleportation.
+
+#### 4.12. IWPS SHOULD allow a User to understand the requirements of launching the Destination Platform, including client software downloads, registration, and native token ownership, before initiating the teleportation.
+
+#### 4.13. IWPS SHOULD standardize legal agreements that gives Platforms flexibility but at the same time allows Users to understand the implications without having to read the full agreement (e.g.- Apache 2 is well understood).
+
 ### 5. Messaging System Requirements
 
 This section outlines the essential requirements for messaging systems that IWPS will rely on for communication across various Platforms, applications, and devices. The requirements definitions aim to ensure IWPS runs on secure messaging systems with enough flexibility to meet compatibility requirements. Each subsection is designed to address a different aspect of communication, ranging from intradevice messaging to secure Internet-based communication, thereby ensuring a robust and adaptable messaging systems that IWPS can rely on.
@@ -383,7 +391,7 @@ Rationale: To provide flexibility in identity management for various Platforms.
 
 Rationale:  Users should know the options they have for identity in a Platform.
 
-#### 8.5. IWPS SHOULD require Destination Platforms to track which Originating Platform IDs are tied to which Destination Platform IDs. 
+#### 8.5. IWPS SHOULD track which Originating Platform IDs are tied to which Destination Platform IDs while conforming to 8.17, 8.18, and section 10 below. 
 
 Rationale:  This ensures IWPS works in a consistent manner from a User perspective.
 
@@ -468,6 +476,22 @@ Rationale: To ensure that Users are not locked out in case the Identity System f
 #### 8.22. IWPS SHOULD require Identity Services to make available to Users information about their policies.  
 
 Rationale: To ensure transparency and informed user choice.
+
+#### 8.23. IWPS MAY adopt or create a blockchain ID standard that includes a network ID  
+
+Rationale: To avoid confusion on which chain an ID is located on.
+
+#### 8.24. IWPS SHOULD adopt specifications that deter or eliminate unresolvable contention on namespaces.  
+
+Rationale: Contention in namespaces causes confusion with developers and users.
+
+#### 8.25. IWPS MAY incorporate ID systems that do not rely on the DNS system.  
+
+Rationale: The DNS system has some points of centralization.
+
+#### 8.26. IWPS SHOULD place minimum burden on users from a user experience and complexity perspective  
+
+Rationale: To ensure ease of use.
 
 ### 9. Payment Service Requirements
 
